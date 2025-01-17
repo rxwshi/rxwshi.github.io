@@ -268,23 +268,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -355,43 +349,44 @@ Pricing, International Finance, Financial Economics</p>
 <hr />
 <p><span style="color:Black; font-size:1.5em;"> Working Papers
 </span></p>
-<p><br /> <span style="color:Black; font-size:1.2em;"> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3922077"><strong>Model
-Uncertainty in the Cross Section</strong></a> (with <a href="https://sites.google.com/view/jiantaohuang/home">Jiantao
-Huang</a>) </span> <br /> <!---
-[slides](http://ranshi.one/MUCS_Slides.pdf) 
-<br/>
----></p>
-<p><span style="color:Black; font-size:1em;"> We develop a transparent
-Bayesian framework to measure uncertainty in asset pricing models. Our
-framework quantifies the tradeoff between mean-variance efficiency and
-parsimony for models to attain high posterior probabilities. Model
-uncertainty is defined as the entropy of these posterior probabilities,
-which is consistently interpretable even under misspecification due to
-omitted factors. Empirically, model uncertainty accumulates during major
-market events, carrying a significantly negative risk premium of
-approximately half the magnitude of the market. Positive shocks to model
-uncertainty predict persistent outflows from US equity funds and inflows
-to Treasury funds. </span></p>
 <p><br /> <span style="color:Black; font-size:1.2em;"> <a href="http://ranshi.one/OIB.pdf"><strong>Forecasting Crashes with a
-Smile</strong></a> (with <a href="http://personal.lse.ac.uk/martiniw/">Ian Martin</a>) </span>
-<br /></p>
-<p><span style="color:Black; font-size:1em;"> We use option prices to
-derive bounds on the probability of a crash in an individual stock, and
-argue that the lower bound should be close to the truth. Empirically,
-the lower bound is highly statistically and economically significant; on
-its own, it outperforms 15 stock characteristics proposed by the prior
-literature combined. In a multivariate regression, a one standard
-deviation increase in the bound raises the predicted crash probability
-by 3 percentage points, whereas a one standard deviation increase in the
-next most important predictor (a measure of short interest) raises the
-predicted probability by only 0.3 percentage points. </span></p>
+Smile</strong></a> (with <a href="http://personal.lse.ac.uk/martiniw/">Ian Martin</a>) </span> <br />
+<em>Jack Treynor Prize</em> <br /> <span style="color:Black; font-size:1em;"> We use option prices to derive
+bounds on the probability of a crash in an individual stock, and argue
+that the lower bound should be close to the truth. Empirically, we find
+that the lower bound is a highly successful predictor of crashes, both
+in and out of sample; on its own, it outperforms 15 stock
+characteristics proposed by the prior literature combined. In a
+multivariate regression, a one standard deviation increase in the bound
+raises the predicted crash probability by 3 percentage points, whereas a
+one standard deviation increase in the next most important predictor (a
+measure of short interest) raises the predicted probability by only 0.3
+percentage points. </span></p>
+<p><br /> <span style="color:Black; font-size:1.2em;"> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3922077"><strong>Model
+Uncertainty in the Cross Section</strong></a> (with <a href="https://sites.google.com/view/jiantaohuang">Jiantao Huang</a>)
+</span> <br /> <span style="color:Black; font-size:1em;"> We develop a
+transparent Bayesian framework to measure uncertainty in asset pricing
+models. By assigning a modified class of <span class="math inline">\(g\)</span>-priors to the risk prices of asset
+pricing factors, our method quantifies the trade-off between
+mean-variance efficiency and parsimony for asset pricing models to
+achieve high posterior probabilities. Model uncertainty is defined as
+the entropy of these posterior probabilities. We prove the model
+selection consistency property of our procedure, which is missing from
+the classic <span class="math inline">\(g\)</span>-priors. Acknowledging
+the possibility of omitting true factors in real applications, we also
+characterize the maximum degree of contamination that the omitted
+factors can introduce to our model uncertainty measure. Empirically, we
+find that model uncertainty escalates during major market events and
+carries a significantly negative risk premium of approximately half the
+magnitude of the market. Positive shocks to model uncertainty predict
+persistent outflows from US equity funds and inflows to Treasury funds.
+</span></p>
 <p><br /> <span style="color:Black; font-size:1.2em;"> <a href="http://ranshi.one/QLMA_CIP.pdf"><strong>A Quantitative Model of
 Limited Arbitrage in Currency Markets: Theory and
 Estimation</strong></a> </span> <br /> <!---
 [slides](http://ranshi.one/QLMA_CIP.pdf) 
 <br/>
----></p>
-<p><span style="color:Black; font-size:1em;"> I develop and estimate a
+---> <span style="color:Black; font-size:1em;"> I develop and estimate a
 limits-to-arbitrage model to quantify the effects of financial
 constraints, arbitrage capital, and hedging demands on asset prices and
 their deviations from frictionless benchmarks. Using foreign exchange
@@ -402,8 +397,9 @@ maturities. While arbitrage capital fluctuation explains the remaining
 19 percent of variation on average, it periodically stabilizes prices
 when the other two forces exert disproportionately large impacts. The
 model features a general form of financial constraints and produces a
-nonparametric arbitrage profit function. I unveil shapes and dynamics of
-financial constraints from estimates of this function. </span></p>
+nonparametric arbitrage profit function. I unveil the shapes and
+dynamics of financial constraints from estimates of this function.
+</span></p>
 <hr />
 <p><span style="color:Black; font-size:1.5em;"> Publication </span></p>
 <p><br /> <span style="color:Black; font-size:1.2em;"> <a href="https://www.sciencedirect.com/science/article/pii/S0304407623001288"><strong>The
@@ -411,9 +407,8 @@ Spread of COVID-19 in London: Network Effects and Optimal
 Lockdowns</strong></a> (with <a href="https://christianjulliard.net">Christian Julliard</a> and <a href="http://personal.lse.ac.uk/yuan/">Kathy Yuan</a>) <em>Journal of
 Econometrics (2023), 235:2:2125-2154</em> </span>
 <!--[slides](http://ranshi.one/C19LDN_Slides.pdf) 
---> <br /></p>
-<p><span style="color:Black; font-size:1em;"> We generalise a stochastic
-version of the workhorse SIR (Susceptible-Infectious-Removed)
+--> <br /> <span style="color:Black; font-size:1em;"> We generalise a
+stochastic version of the workhorse SIR (Susceptible-Infectious-Removed)
 epidemiological model to account for spatial dynamics generated by
 network interactions. Using the London metropolitan area as a salient
 case study, we show that commuter network externalities account for
@@ -429,9 +424,10 @@ effective, since they fail to account for network externalities.
 </span></p>
 <hr />
 <p><span style="color:Black; font-size:1.5em;"> Teaching </span></p>
-<p><span style="color:Black; font-size:1.0em;"> <a href="https://canvas.colorado.edu/courses/98015">FNCE 3030 - Investment
-and Portfolio Management</a> (Spring 2023, Fall 2023) </span> </br>
-</br></p>
+<p><span style="color:Black; font-size:1.0em;"> <a href="https://canvas.colorado.edu/courses/106876">FNCE 3030 - Investment
+and Portfolio Management</a> (Spring 2023, Fall 2023, 2024) </span>
+</br> <span style="color:Black; font-size:1.0em;"> <a href="https://canvas.colorado.edu/courses/100311">FNCE 7020 Research
+Topics (Empirical Asset Pricing)</a> (Spring 2024) </span> </br></p>
 
 
 
